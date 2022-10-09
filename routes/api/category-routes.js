@@ -74,12 +74,12 @@ router.put('/:id', (req, res) => {
     });
 });
 
-router.delete('/:id', (req, res) => {
+router.delete('/', (req, res) => {
   // delete a category by its `id` value
 
   Category.destroy({
     where: {
-      id: req.params.id
+    
     }
   })
     .then(dbCatData => {
